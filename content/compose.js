@@ -151,8 +151,6 @@ var ShrunkedCompose = {
 		});
 	},
 	destroy: function ShrunkedCompose_destroy() {
-		Services.console.logStringMessage('ShrunkedCompose_destroy was called');
-
 		if (this.oldGenericSendMessage) {
 			window.GenericSendMessage = this.oldGenericSendMessage;
 		}
