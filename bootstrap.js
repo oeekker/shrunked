@@ -1,4 +1,4 @@
-/* globals Components, Services */
+/* globals APP_SHUTDOWN, Components, Services */
 /* exported install, uninstall, startup, shutdown */
 Components.utils.import('resource://gre/modules/Services.jsm');
 
@@ -40,7 +40,11 @@ function startup() {
 
 	windowObserver.init();
 }
-function shutdown() {
+function shutdown(params, reason) {
+	if (reason == APP_SHUTDOWN) {
+		return;
+	}
+
 	windowObserver.destroy();
 
 	Components.utils.unload('chrome://shrunked/content/modules/ExifData.jsm');

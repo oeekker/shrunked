@@ -7,6 +7,7 @@ content/browser-content.js
 content/browser.js
 content/browser.xul
 content/compose.js
+content/config.css
 content/config.js
 content/config.xul
 content/icon16.png
